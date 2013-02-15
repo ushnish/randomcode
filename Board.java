@@ -8,20 +8,14 @@ package tetris;
  Does not do any drawing or have any idea of pixels. Instead,
  just represents the abstract 2-d board.
 */
-public class Board  {
+public class Board	{
 	// Some ivars are stubbed out for you:
-	private int width;
-	private int height;
+	private int width, height;
 	
 	private boolean[][] grid;
-	private int[] rowWidths;
-	private int[] colHeights;
-	private boolean[] rowsToClear;
-	
 	private boolean[][] backupGrid;
-	private int[] backupRowWidths;
-	private int[] backupColHeights;
-	private boolean[] backupRowsToClear;		
+	private int[] rowWidths, colHeights, backupRowWidths, backupColHeights;
+	private boolean[] rowsToClear, backupRowsToClear;		
 	
 	private boolean DEBUG = false;
 
@@ -152,9 +146,8 @@ public class Board  {
 	 to compute this fast -- O(skirt length).
 	*/
 	public int dropHeight(Piece piece, int x) {
-		int currHeight;
+		int currHeight, colHeight;
 		int dropHeight = 0;
-		int colHeight;
 		int[] skirt = piece.getSkirt();
 		int pieceWidth = piece.getWidth();
 		if (x + pieceWidth > width) throw new RuntimeException("Invalid starting x coordinate");
@@ -232,8 +225,7 @@ public class Board  {
 		int numPoints = points.length;
 //		justPlacedBlocks = new TPoint[numPoints];
 		
-		int yPos;
-		int xPos;
+		int yPos, xPos;
 		if (piece.getWidth() + x - 1 < width && piece.getHeight() + y - 1 < height) {
 			for (int i = 0; i < numPoints; i++) {
 				point = points[i];
