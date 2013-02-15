@@ -26,3 +26,8 @@ WEB LOADER
  1. WebWorker.java
  2. WebTableModel.java
  3. WebFrame.java
+
+
+APRIORI
+ This code uses the Apriori algorithm to generate the top item association rules in terms of confidence, lift and conviction. A sample data file can be found at http://snap.stanford.edu/class/cs246-data/browsing.txt. It is not very efficient and might be improved.
+ 1. Apriori.java
