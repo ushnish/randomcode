@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 // this code actually generates more than just 5 top keys and also the values themselves 
 public class Apriori {
-  private final static int freq = 100;
+	private final static int freq = 100;
 	
 	public static void calcSingles(String[] input, HashMap<String, Integer> map) {
 		int length = input.length;
@@ -380,16 +380,22 @@ public class Apriori {
 			confLiftPairs(map1, map2, confMap2, liftMap2, convMap2, numLines);
 			confLiftTriples(map1, map2, map3, confMap3, liftMap3, convMap3, numLines);
 			
+			System.out.println("Top 2-Item Confidence Rules");
 			System.out.println(mapOutput(confMap2));
 			System.out.println();
+			System.out.println("Top 3-Item Confidence Rules");
 			System.out.println(mapOutput(confMap3));
 			System.out.println();
+			System.out.println("Top 2-Item Lift Rules");
 			System.out.println(mapOutput(liftMap2));
 			System.out.println();
+			System.out.println("Top 3-Item Lift Rules");
 			System.out.println(mapOutput(liftMap3));
 			System.out.println();
+			System.out.println("Top 2-Item Conviction Rules");
 			System.out.println(mapOutput(convMap2));
 			System.out.println();
+			System.out.println("Top 3-Item Conviction Rules");
 			System.out.println(mapOutput(convMap3));
 			
 		}
