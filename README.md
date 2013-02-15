@@ -2,7 +2,8 @@ Random code projects I've done
 
 
 TETRIS
- The tetris project consists of the following files
+
+The tetris project consists of the following files
  1. TPoint.java
  2. Piece.java
  3. Board.java
