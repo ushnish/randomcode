@@ -7,8 +7,7 @@ public interface Brain {
     // ("static" here means it does not have a pointer to an
     // enclosing Brain object, it's just in the Brain namespace.)
     public static class Move {
-        public int x;
-        public int y;
+        public int x, y;
         public Piece piece;
         public double score;    // lower scores are better
     }
